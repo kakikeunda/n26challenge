@@ -1,8 +1,0 @@
-carlos/unda/n26challenge/model/TransactionsListSingleton.class
-carlos/unda/n26challenge/Utils/CustomComparator.class
-carlos/unda/n26challenge/model/Statistics.class
-carlos/unda/n26challenge/controller/PostTransactionController.class
-carlos/unda/n26challenge/Utils/Constants.class
-carlos/unda/n26challenge/exception/TransactionOvertimeException.class
-carlos/unda/n26challenge/controller/GetStatisticsController.class
-carlos/unda/n26challenge/model/Transaction.class

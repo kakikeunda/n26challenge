@@ -17,8 +17,10 @@ public class GetStatisticsController {
 
     @RequestMapping(value = Constants.GET_STATISTICS_PATH, method = RequestMethod.GET)
     public String getStatistics(Model model){
+        Gson gson = new Gson();
 
-        model.addAttribute(Constants.MODEL_JSON_ATTRIBUTE, new Gson().toJson(TransactionsListSingleton.getInstance().getStatistics()));
+        model.addAttribute(Constants.MODEL_JSON_ATTRIBUTE, gson.toJson(TransactionsListSingleton.getInstance()
+                .calculateStatistics()));
 
         return Constants.GET_STATISTICS_VIEW_NAME;
     }

@@ -29,36 +29,25 @@ public class TransactionsListSingleton {
         transactionsList.add(value);
     }
 
-    public List<Transaction> getSixtySecondsOlderTransactions(){
+    public Statistics calculateStatistics(){
         List<Transaction> transactions = new ArrayList<Transaction>();
-
+        double sum = 0;
         for (Transaction transaction : transactionsList) {
             if (new Date().getTime() - transaction.getTimestamp() <= 60000) {
                 transactions.add(transaction);
+                sum += transaction.getAmount();
             }
         }
-        Collections.sort(transactions, new CustomComparator());
-
-        return transactions;
-    }
-
-    public Statistics getStatistics(){
-        List<Transaction> transactions = TransactionsListSingleton.getInstance().getSixtySecondsOlderTransactions();
-
-        if (transactions.size() == 0){
+        if (transactions.size() == 0) {
             return new Statistics(0,0,0,0,0);
-        } else{
+        }else{
+            Collections.sort(transactions, new CustomComparator());
+
             int count = transactions.size();
             double min = transactions.get(0).getAmount();
-            double max = transactions.get(count-1).getAmount();
-            double sum = 0;
-
-            for (Transaction transaction : transactions){
-                sum +=transaction.getAmount();
-            }
-
+            double max = transactions.get(count - 1).getAmount();
             double avg = sum / count;
-            return new Statistics(sum,avg,max,min,count);
+            return new Statistics(sum, avg, max, min, count);
         }
     }
 }

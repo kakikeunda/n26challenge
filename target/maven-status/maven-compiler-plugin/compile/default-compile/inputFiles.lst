@@ -1,0 +1,8 @@
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/controller/PostTransactionController.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/Utils/Constants.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/model/Statistics.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/model/Transaction.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/model/TransactionsListSingleton.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/exception/TransactionOvertimeException.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/controller/GetStatisticsController.java
+/home/ceunda/Documents/n26challenge/src/main/java/carlos/unda/n26challenge/Utils/CustomComparator.java

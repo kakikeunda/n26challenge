@@ -1,12 +1,13 @@
 package carlos.unda.n26challenge.model;
 
-public class Transaction {
+
+public class Transaction{
     private Double amount;
+
     private long timestamp;
 
     public Transaction() {
     }
-
     public Transaction(Double amount, long timestamp) {
         this.amount = amount;
         this.timestamp = timestamp;

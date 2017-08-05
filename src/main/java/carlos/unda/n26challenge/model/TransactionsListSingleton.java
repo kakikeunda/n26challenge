@@ -1,6 +1,6 @@
 package carlos.unda.n26challenge.model;
 
-import carlos.unda.n26challenge.Utils.CustomComparator;
+import carlos.unda.n26challenge.utils.CustomTransactionComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,6 +21,7 @@ public class TransactionsListSingleton {
     private TransactionsListSingleton(){
         transactionsList = new ArrayList<Transaction>();
     }
+
     public ArrayList<Transaction> getTransactionsList(){
         return transactionsList;
     }
@@ -41,7 +42,7 @@ public class TransactionsListSingleton {
         if (transactions.size() == 0) {
             return new Statistics(0,0,0,0,0);
         }else{
-            Collections.sort(transactions, new CustomComparator());
+            Collections.sort(transactions, new CustomTransactionComparator());
 
             int count = transactions.size();
             double min = transactions.get(0).getAmount();
